@@ -20,7 +20,7 @@ let food = {};
 let dx = TILE_SIZE;
 let dy = 0;
 let score = 0;
-let highScore = localStorage.getItem('neoSnakeHighScore') || 0;
+let highScore = localStorage.getItem('thSnakeHighScore') || 0;
 let gameLoopTimeout;
 let isGameRunning = false;
 let changingDirection = false;
@@ -150,7 +150,7 @@ function update() {
         if (score > highScore) {
             highScore = score;
             highScoreEl.textContent = highScore;
-            localStorage.setItem('neoSnakeHighScore', highScore);
+            localStorage.setItem('thSnakeHighScore', highScore);
         }
         spawnFood();
         

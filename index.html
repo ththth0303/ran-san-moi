@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trò chơi Rắn Săn Mồi (Snake Game) với giao diện hiện đại">
+    <title>Rắn Săn Mồi - NeoSnake</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>NeoSnake</h1>
+            <div class="score-board">
+                <div class="score-card">
+                    <span class="label">Điểm</span>
+                    <span class="value" id="current-score">0</span>
+                </div>
+                <div class="score-card">
+                    <span class="label">Kỷ lục</span>
+                    <span class="value" id="high-score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-wrapper">
+            <div class="canvas-container">
+                <canvas id="game-canvas" width="400" height="400"></canvas>
+                <div id="game-over-overlay" class="overlay hidden">
+                    <h2>Game Over!</h2>
+                    <p>Điểm của bạn: <span id="final-score">0</span></p>
+                    <button id="restart-btn" class="glow-btn">Chơi Lại</button>
+                </div>
+                <div id="start-overlay" class="overlay">
+                    <h2>Sẵn Sàng Chưa?</h2>
+                    <p>Dùng phím mũi tên, swipe (vuốt màn hình) hoặc nút bấm để di chuyển</p>
+                    <button id="start-btn" class="glow-btn">Bắt Đầu</button>
+                </div>
+            </div>
+            
+            <!-- Mobile Controls -->
+            <div class="mobile-controls">
+                <button class="control-btn" id="up-btn" aria-label="Lên">▲</button>
+                <div class="horizontal-controls">
+                    <button class="control-btn" id="left-btn" aria-label="Trái">◀</button>
+                    <button class="control-btn" id="down-btn" aria-label="Xuống">▼</button>
+                    <button class="control-btn" id="right-btn" aria-label="Phải">▶</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Created with ❤️ by <strong>Ngô Trung Thắng</strong></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
